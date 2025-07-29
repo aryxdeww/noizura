@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/Jost-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/image/solid-white.png" type="Texture" id=2]
+[ext_resource path="res://script/loading.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 114
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1920, 1080 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CenterContainer"]
+margin_left = 747.0
+margin_top = 457.0
+margin_right = 1172.0
+margin_bottom = 622.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Loading"
+align = 1
